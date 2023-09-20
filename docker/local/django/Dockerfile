@@ -8,9 +8,9 @@ FROM python:${PYTHON_VERSION} as python
 FROM python as python-build-stage 
 ARG BUILD_ENVIRONMENT=local 
 
-RUN apt-get update && apt-get install --no-install-recommend -y \
+RUN apt-get update && apt-get install --no-install-recommends -y \
     build-essential \
-    libpq-dev 
+    libpq-dev
 
 COPY ./requirements .
 
@@ -32,10 +32,10 @@ ENV BUILD_ENV ${BUILD_ENVIRONMENT}
 
 WORKDIR ${APP_HOME}
 
-RUN apt-get update && apt-get install --no-install-recommend -y \
+RUN apt-get update && apt-get install --no-install-recommends -y \
     libpq-dev \
     gettext \
-    && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
+    && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendIsmportant=false \
     && rm -rf /var/lib/apt/lists/*
 
 
