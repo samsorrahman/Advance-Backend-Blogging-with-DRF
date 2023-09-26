@@ -1,9 +1,18 @@
 version: "3.9"
 services:
+  es:
+    image: elasticsearch:7.17.9
+    environment:
+      - discovery.type=single-node
+    ports: 
+      - "9200:9200"
+    networks:
+      - authors-api
   api:
     build:
       context: .
       dockerfile: ./docker/local/django/Dockerfile
+    command: /start
     volumes:
       - .:/app:z
       - static_volume:/app/staticfiles
@@ -17,7 +26,8 @@ services:
       - postgres
       - mailhog
       - redis
-    command: /start
+      - es
+    
     networks:
       - authors-api
   postgres:
