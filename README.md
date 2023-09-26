@@ -12,6 +12,7 @@ How to implement Asynchronous tasks monitoring with Flower<br>
 How to work with Postgres within a Docker container, including how to perform backups using shell scripts.<br>
 How to setup an Ubuntu server, running Django over a Domain name.<br>
 How to use makefiles to make working with Docker easier.<br>
+Searching functionalities using elastic search<br>
 Python Test coverage using coverage<br>
 Logging in Django<br>
 Token Based Authentication<br>
