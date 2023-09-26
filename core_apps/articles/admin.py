@@ -2,6 +2,10 @@ from django.contrib import admin
 
 from . import models
 
+class ClapAdmin(admin.ModelAdmin):
+    list_display = ["pkid", "id", "user", "article"]
+    list_display_links = ["id", "user"]
+    list_filter = ["created_at", "updated_at"]
 
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ["pkid", "author", "title", "slug", "view_count"]
@@ -20,3 +24,4 @@ class ArticleViewAdmin(admin.ModelAdmin):
 
 admin.site.register(models.Article, ArticleAdmin)
 admin.site.register(models.ArticleView, ArticleViewAdmin)
+admin.site.register(models.Clap, ClapAdmin)
