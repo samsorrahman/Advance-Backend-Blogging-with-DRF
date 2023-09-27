@@ -65,10 +65,11 @@ rebuildindex:
 	docker compose -f local.yml exec api python manage.py search_index --rebuild
 
 currenttestcoverage:
-	docker compose -f local.yml run --rm api pytest -p no:warnings --cov=.-v
+	docker compose -f local.yml run --rm api pytest -p no:warnings --cov=. -v
 
 coveragehtmlreport:
 	docker compose -f local.yml run --rm api pytest -p no:warnings --cov=. --cov-report html
 
 
-	
+pytestTest:
+	docker compose -f local.yml run --rm api pytest
