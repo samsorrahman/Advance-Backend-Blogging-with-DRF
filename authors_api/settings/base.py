@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-from pathlib import Path
 from datetime import timedelta
+from pathlib import Path
+
 import environ
 
 env = environ.Env()
@@ -35,29 +36,35 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-                    "rest_framework", 
-                    "django_filters", 
-                    "corsheaders",
-                    "django_countries", 
-                    "phonenumber_field", 
-                    "drf_yasg", 
-                    "djcelery_email", 
-                    "rest_framework.authtoken",
-                    "allauth",
-                    "allauth.account",
-                    "allauth.socialaccount",
-                    "dj_rest_auth",
-                    "dj_rest_auth.registration",
-                    "taggit",
-                    "django_elasticsearch_dsl",
-                    "django_elasticsearch_dsl_drf",
-    ]
+    "rest_framework",
+    "django_filters",
+    "corsheaders",
+    "django_countries",
+    "phonenumber_field",
+    "drf_yasg",
+    "djcelery_email",
+    "rest_framework.authtoken",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "dj_rest_auth",
+    "dj_rest_auth.registration",
+    "taggit",
+    "django_elasticsearch_dsl",
+    "django_elasticsearch_dsl_drf",
+]
 
 
-
-
-LOCAL_APPS=["core_apps.users", "core_apps.profiles", "core_apps.common","core_apps.articles",
-    "core_apps.ratings", "core_apps.bookmarks", "core_apps.responses",  "core_apps.search"]
+LOCAL_APPS = [
+    "core_apps.users",
+    "core_apps.profiles",
+    "core_apps.common",
+    "core_apps.articles",
+    "core_apps.ratings",
+    "core_apps.bookmarks",
+    "core_apps.responses",
+    "core_apps.search",
+]
 
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -152,7 +159,7 @@ ADMIN_URL = "supersecret/"
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "staticfiles/"
-STATIC_ROOT=str(ROOT_DIR / "staticfiles")
+STATIC_ROOT = str(ROOT_DIR / "staticfiles")
 
 MEDIA_URL = "mediafiles/"
 MEDIA_ROOT = str(ROOT_DIR / "mediafiles")
@@ -165,7 +172,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_URL_REGEX = r"^/api/.*$"
 
-AUTH_USER_MODEL= "users.User"
+AUTH_USER_MODEL = "users.User"
 
 CELERY_BROKER_URL = env("CELERY_BROKER")
 CELERY_RESULT_BACKEND = CELERY_BROKER_URL
@@ -225,7 +232,6 @@ ELASTICSEARCH_DSL = {
         "hosts": "es:9200",
     },
 }
-
 
 
 LOGGING = {

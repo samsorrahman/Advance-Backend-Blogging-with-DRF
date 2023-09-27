@@ -4,6 +4,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
+
 from .managers import CustomUserManager
 
 
@@ -37,7 +38,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     def get_full_name(self):
         return f"{self.first_name.title()} {self.last_name.title()}"
 
-# Create your models here.
+    # Create your models here.
     @property
     def get_short_name(self):
         return self.first_name

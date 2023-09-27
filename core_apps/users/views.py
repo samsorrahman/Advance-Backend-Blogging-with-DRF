@@ -1,10 +1,12 @@
+from django.contrib.auth import get_user_model
 from django.shortcuts import render
-from .serializers import UserSerializer
 from rest_framework.generics import RetrieveUpdateAPIView
 from rest_framework.permissions import IsAuthenticated
-from django.contrib.auth import get_user_model
+
+from .serializers import UserSerializer
 
 # Create your views here.
+
 
 class CustomUserDetailsView(RetrieveUpdateAPIView):
     serializer_class = UserSerializer

@@ -1,7 +1,6 @@
 from .base import *
 from .base import env
 
-
 ADMIN = [("Alpha Omondi Ogilo", "api.imperfect@gmail.com")]
 
 

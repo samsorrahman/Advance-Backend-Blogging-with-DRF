@@ -1,13 +1,16 @@
-from django.shortcuts import render
 from django.db import IntegrityError
+from django.shortcuts import render
 from rest_framework import generics, permissions
-from core_apps.ratings.exceptions import YouhaveAlreadyRated
-from .serializers import RatingSerializer
-from .models import Rating
-from core_apps.articles.models import Article
 from rest_framework.exceptions import ValidationError
 
+from core_apps.articles.models import Article
+from core_apps.ratings.exceptions import YouhaveAlreadyRated
+
+from .models import Rating
+from .serializers import RatingSerializer
+
 # Create your views here.
+
 
 class RatingCreateView(generics.CreateAPIView):
     queryset = Rating.objects.all()
