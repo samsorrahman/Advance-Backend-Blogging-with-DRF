@@ -20,3 +20,4 @@ Working with emails using Mailhog in development and Mailgun in production.<br>
 
 <h5>If you are on windows system: You Must Learn How to Run a Makefile in Windows</h5>
 <p><a href="https://medium.com/@samsorrahman/how-to-run-a-makefile-in-windows-b4d115d7c516" target="blank">Here what I have brought for you!</a></p>
+checkout the requirement folder for dependencies installation.
