@@ -76,6 +76,7 @@ Make sure you have the following technologies installed on your machine:
 
    make build
 
+Download insomnia and add the api.har file 
 
 ![Capture](https://github.com/samsorrahman/Advance-Backend-Blogging-with-DRF/assets/112087807/d24d3dcc-2341-425c-875a-c05fca14b4fe)
 
