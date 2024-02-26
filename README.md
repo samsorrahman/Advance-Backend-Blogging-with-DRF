@@ -90,11 +90,10 @@ Make sure you have the following technologies installed on your machine:
 The `Makefile` in the project contains other useful commands for managing the application. Some of the commonly used commands are:
 
 Make sure to stop the application containers when you are done by running:
-
-```bash
 make down
-
 
 <h5>If you are on windows system: You Must Learn How to Run a Makefile in Windows</h5>
 <p><a href="https://medium.com/@samsorrahman/how-to-run-a-makefile-in-windows-b4d115d7c516" target="blank">Here what I have brought for you!</a></p>
 checkout the requirement folder for dependencies installation.
+
+
